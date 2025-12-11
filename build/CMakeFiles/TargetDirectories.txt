@@ -1,0 +1,3 @@
+/home/ystal/EmulatorWiFiCard/build/CMakeFiles/wifi_emulator.dir
+/home/ystal/EmulatorWiFiCard/build/CMakeFiles/edit_cache.dir
+/home/ystal/EmulatorWiFiCard/build/CMakeFiles/rebuild_cache.dir

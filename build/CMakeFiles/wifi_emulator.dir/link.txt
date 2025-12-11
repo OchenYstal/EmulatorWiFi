@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/wifi_emulator.dir/link.d CMakeFiles/wifi_emulator.dir/src/main.cpp.o CMakeFiles/wifi_emulator.dir/src/ipc/socket_server.cpp.o -o wifi_emulator
