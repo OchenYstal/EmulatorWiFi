@@ -37,7 +37,7 @@ SocketServer::SocketServer()
     } 
     std::cout << "Server waiting for conection..." << std::endl;
 }
-void SocketServer::start()
+void SocketServer::start(Protocol proto)
 {  
     while(true)
     {  
@@ -48,29 +48,13 @@ void SocketServer::start()
           exit(EXIT_FAILURE);
         }
         std::cout << "Client connected!" << std::endl;
-        r = read(ClientSocket, buffer, sizeof(buffer) - 1);
+        r = read(ClientSocket, buffer, sizeof(buffer));
         buffer[r] = 0;
-        if(strcmp(buffer, "PING") == 0)
-        {
-            write(ClientSocket, "PONG", 5);
-        }
-        else if (strcmp(buffer, "SCAN") == 0)
-        {
-            write(ClientSocket, "WiFi1,AgroNet,Volna", 20);
-        }
-        else if (strcmp(buffer, "CONNECT ") == 0)
-        {
-            write(ClientSocket, "OK", 3);
-        }
-        else if (strcmp(buffer, "EXIT") == 0)
-        {
-            write(ClientSocket, "BYEBYE", 7);
-            break;
-        }
-        else
-        {
-            write(ClientSocket, "ERR", 4);
-        }
+
+        std::string cmd(buffer);
+        std::cout << cmd << std::endl;
+        std::string response = proto.handle(cmd);
+        write(ClientSocket, response.c_str(), response.size());
     }
     
     close(server_socket);
