@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/ystal/EmulatorWiFiCard/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
