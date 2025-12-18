@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
             exit(EXIT_FAILURE);
         }
          std::cout << "Connected to server" << std::endl;
-         write(ClientSocket, "STATUS", 7);
+         write(ClientSocket, "EXIT", 4);
          read(ClientSocket, buffer, sizeof(buffer));
          std::cout << buffer;
         close(ClientSocket);  

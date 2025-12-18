@@ -1,0 +1,28 @@
+{
+    "networks": [
+    {
+        "SSID":"Brodsky",
+        "IP":"94.237.100.54",
+        "dBm":"-60",
+        "security":"WPA2"
+    },
+    {
+        "SSID":"Evangelion",
+        "IP":"73.227.130.85",
+        "dBm":"-30",
+        "security":"WPA"
+    },
+    {
+        "SSID":"Pontius",
+        "IP":"168.212.226.204",
+        "dBm":"-120",
+        "security":"WEP"
+    },
+    {
+        "SSID":"Schopenhauer",
+        "IP":"192.168.1.1",
+        "dBm":"-80",
+        "security":"WPA3"
+    }
+    ]
+}

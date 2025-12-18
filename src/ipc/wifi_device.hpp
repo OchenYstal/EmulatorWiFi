@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-
+#include "Network/NetWork.hpp"
 
 class WiFiDevice
 {
@@ -9,7 +9,6 @@ class WiFiDevice
      std::string ssid;
      std::string current_ssid;
      bool connected = false;
-     int signal_strength;
      public:
      std::string cmd_status();
      std::string cmd_connect(const std::string& arg);
